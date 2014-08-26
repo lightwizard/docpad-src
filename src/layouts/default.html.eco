@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+		 More info: h5bp.com/i/378 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<!-- Our site title and description -->
+	<title><%= @getPreparedTitle() %></title>
+	<meta name="description" content="<%= @getPreparedDescription() %>" />
+	<meta name="keywords" content="<%= @getPreparedKeywords() %>" />
+	<meta name="author" content="<%= @site.author or '' %>" />
+
+
+	<!-- Output DocPad produced meta elements -->
+	<%- @getBlock('meta').toHTML() %>
+
+	<!-- Mobile viewport optimized: h5bp.com/viewport -->
+	<meta name="viewport" content="width=device-width" />
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Roboto:300,300italic' rel='stylesheet' type='text/css'>
+	
+	<!-- Prefetch these pages -->
+	<link rel="prefetch" href="http://ericlightwizard.co.uk/portfolio.html" />
+	<link rel="prefetch" href="http://ericlightwizard.co.uk/about.html" />
+	<link rel="prefetch" href="http://ericlightwizard.co.uk/decades.html" />
+
+	<!-- Icons -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/icons/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/icons/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/icons/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="/images/icons/apple-touch-icon-57-precomposed.png">
+
+	<!-- Shims: IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	
+	<%- @getBlock('styles').add(@site.styles).toHTML() %>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	 <link rel="stylesheet" href="/styles/animate.css">
+	<link  rel="stylesheet" href="/styles/eric.css" />
+</head>
+<body>
+	<div class="container">
+		<section id="content">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12">
+					<%- @partial('navigator', false) %>
+					<hr/>
+				</div>
+			</div>
+				<div class="row">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1">	
+				<!-- #### Content starts here #### -->
+					<%- @content %>
+				<!-- #### Content ends here #### -->
+					<hr/>
+				</div>
+			</div>
+		</section>
+
+		
+	</div><!-- /container -->
+
+	<%- @partial('footer', true) %>
+</div>
+	<!-- Scripts -->
+	<%- @getBlock('scripts').add(@site.scripts,  {defer:false,async:false}).toHTML() %>
+	<script type="text/javascript">
+	 new WOW().init();
+	</script>
+</body>
+</html>

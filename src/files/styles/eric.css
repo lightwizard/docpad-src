@@ -1,0 +1,218 @@
+body {
+font-family: Roboto, sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 1.6;
+/* Margin bottom by footer height */
+padding: 0;
+margin: 0;
+margin-bottom: 90px;
+margin-top:  10px;
+background-color: RGB(243, 243, 243);
+background-image: url("/images/bg5.jpg");
+background-repeat: repeat;
+color: #3c3a3a;
+
+}
+
+html {
+position: relative;
+min-height: 100%;
+}
+
+
+#hidden {
+height: 1px;
+width: 1px;
+left:  -99999;
+}
+
+.navbar > .container {
+text-align: center;
+}
+.navbar-header,.navbar-brand,.navbar .navbar-nav,.navbar .navbar-nav > li {
+float: none;
+display: inline-block;
+}
+.navbar-brand {
+font-family: 'Playfair Display', serif;
+font-size: 64px;
+margin-bottom: 30px;
+text-shadow:
+ -.020em .020em #fff6e6,
+ -.030em .030em #b7687f,
+    -.060em .060em #e7dcd7;
+}
+.navbar-brand a {
+
+}
+navbar-toggle {
+
+line-height: 1;
+padding: 0;
+margin: 0;
+}
+.navbar {
+border-bottom: 0px solid black;
+line-height: 60px;
+min-height: 60px;
+padding-top: 0;
+vertical-align: bottom;
+/* background-image: url("/images/wizard1.jpg"); */
+background-repeat:no-repeat;
+
+background-position:center;
+}
+
+.navbar-brand {
+line-height: 60px;
+}
+
+@media ( min-width: 1024px ) { 
+body {	
+background-image: url("/images/bg5.jpg");
+background-repeat:repeat;
+}
+}
+
+
+@media ( min-width: 768px ) and (max-width: 1023px) { 
+body {	
+background-image: url("/images/bg5-rep.jpg");
+background-repeat:repeat;
+}
+.container {
+
+}
+.navbar > .container {
+text-align: center;
+}
+.navbar-header,.navbar-brand,.navbar .navbar-nav,.navbar .navbar-nav > li {
+float: none;
+display: inline-block;
+}
+.collapse.navbar-collapse {
+width: auto;
+clear: none;
+}
+}
+#content {
+display:block;
+background:rgba(255,255,255,.94);
+color:#3c3a3a;
+box-shadow:0 3px 25px rgba(0,0,0,.2);
+border:1px solid rgba(0,0,0,.2);
+padding: 20px 10px 20px 10px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+font-family: 'Playfair Display', serif;
+font-weight: 400;
+font-style:italic;
+line-height: 1.1;
+color:rgb(66, 139, 202);
+}
+
+h2 small {
+color: rgb(66, 139, 202);
+}
+
+blockquote, blockquote p {
+font-family: 'Playfair Display', serif;
+font-size: 20px;
+font-weight: 400;
+/* font-style:italic; */
+line-height: 1.8;
+border-left: none;
+color: #555;
+}
+
+p {
+text-align:justify;
+text-justify:inter-word;
+}
+
+
+footer {
+font-family: Roboto, sans-serif;
+}
+
+
+#footer {
+margin-top:  20px;
+border-top: 1px black;
+min-height:  80px;
+margin-top: 40px;
+
+position: absolute;
+bottom: 0;
+width: 100%;
+/* Set the fixed height of the footer here */
+height: 60px;
+}
+
+#footer p {
+line-height: 1.1;
+}
+
+@media ( max-width: 767px ) { 
+
+body {	
+background-image: url("/images/bg5-rep.jpg");
+background-repeat:repeat;
+}
+
+.container  {
+}
+
+.navbar {
+line-height: 1;
+min-height: 10px;
+padding-top: 0;
+margin: 0;
+vertical-align: bottom;
+text-align: center;
+}
+
+ .navbar-header.button {
+margin: 0 auto;	
+
+}
+navbar-toggle {
+border: 1px solid black;
+}
+
+.navbar-brand {
+font-size: 30px;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+text-align: center;
+}
+
+
+}
